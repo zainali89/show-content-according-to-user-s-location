@@ -1,3 +1,6 @@
+<!-- copy the code below and make a widget with name "Menu-URL-generator" and past the following code into it-->
+<!-- then use this widget in the main menu links, for example for events, put the in the URL box /events?[widget code]-->
+
 if($uCityz == 'Denver'){
 	$latz = '39.7392358';
 	$lonz = '-104.990251';
