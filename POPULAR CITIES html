@@ -1,0 +1,181 @@
+<?php 
+$arrayImage = [ "Denver" => "https://www.woowhonetwork.com/images/denver.jpg", "Chicago" => "https://www.woowhonetwork.com/images/chicago.jpg", "Houston" => "https://www.woowhonetwork.com/images/houston.jpg", "Atlanta" => "https://www.woowhonetwork.com/images/atlanta.jpg","Phoenix" => "https://www.woowhonetwork.com/images/phoenix.jpg","San Francisco" => "https://www.woowhonetwork.com/images/san-francisco.jpg","Boston" => "https://www.woowhonetwork.com/images/boston.jpg","Dallas" => "https://www.woowhonetwork.com/images/dallas.jpg","New York" => "https://www.woowhonetwork.com/images/new-york.jpg","Aurora" => "https://www.woowhonetwork.com/images/aurora.jpg","Los Angeles" => "https://www.woowhonetwork.com/images/los-angeles.jpg","Miami" => "https://www.woowhonetwork.com/images/miami.jpg","Colorado Springs" => "https://www.woowhonetwork.com/images/colorado-springs.jpg",];
+
+$arrayURL = [ "Denver" => "/denver'", "Chicago" => "/chicago", "Houston" => "/houston", "Atlanta" => "/atlanta","Phoenix" => "/phoenix","San Francisco" => "https://www.woowhonetwork.com/search_results?q=&location_value=San+Francisco&city=San+Francisco&county_sn=San+Francisco+County&adm_lvl_1_sn=CA&stateSearchLN=California&country_sn=US&location_type=locality&stateSearch=CA&swlat=37.6398299&nelat=37.9298239&swlng=-123.173825&nelng=-122.28178&lat=37.7749295&lng=-122.4194155&faddress=San+Francisco%2C+CA%2C+USA&place_id=ChIJIQBpAG2ahYAR_6128GcTUEo","Boston" => "/boston","Dallas" => "/dallas","New York" => "https://www.woowhonetwork.com/search_results?location_value=new+york&city=New+York&adm_lvl_1_sn=NY&stateSearchLN=New+York&country_sn=US&location_type=locality&stateSearch=NY&swlat=40.4773991&nelat=40.9175771&swlng=-74.25908989999999&nelng=-73.70027209999999&lat=40.7127753&lng=-74.0059728&faddress=New+York%2C+NY%2C+USA&place_id=ChIJOwg_06VPwokRYv534QaPC8g","Aurora" => "https://www.woowhonetwork.com/search_results?q=&location_value=Aurora%2C+CO%2C+USA&city=Aurora&county_sn=Arapahoe+County&adm_lvl_1_sn=CO&stateSearchLN=Colorado&country_sn=US&location_type=locality&stateSearch=CO&swlat=39.550999&nelat=39.826671&swlng=-104.884761&nelng=-104.4889061&lat=39.7294319&lng=-104.8319195&faddress=Aurora%2C+CO%2C+USA&place_id=ChIJmyu6IoZYbIcReOaii2jgQYQ","Los Angeles" => "/los-angeles","Miami" => "/miami","Colorado Springs" => "https://www.woowhonetwork.com/search_results?location_value=Colorado+Springs&city=Colorado+Springs&county_sn=El+Paso+County&adm_lvl_1_sn=CO&stateSearchLN=Colorado&country_sn=US&location_type=locality&stateSearch=CO&swlat=38.7160299&nelat=39.0353389&swlng=-104.917822&nelng=-104.5988969&lat=38.8338816&lng=-104.8213634&faddress=Colorado+Springs%2C+CO%2C+USA&place_id=ChIJK9LmoS5BE4cRE2vo9ZLrjkE",];
+
+
+$info = array('Denver', 'Chicago', 'Houston', 'Atlanta', 'Phoenix', 'San Francisco', 'Boston', 'Dallas', 'New York', 'Aurora', 'Los Angeles', 'Miami', 'Colorado Springs');
+$reloadPageUrl = "https://www.woowhonetwork.com/";
+?>
+<div class="popular-cities-section">
+<h2><span class="title wow slideInUp streaming-title" style="visibility: visible;">Popular cities |</span> <a href="https://www.woowhonetwork.com/cities" class="viewLink wow slideInUp" style="visibility: visible;">View All</a>
+
+                        </h2>
+</div>
+<div class="cityImageWrapper">
+
+                            <div class="pc-grid-container">
+
+                                
+                                    <div id="denverButton" class="pc-item0" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="denver-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1538716729-1537588599denver.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Denver
+                                        </div>
+
+                                    </div>
+
+
+
+								<div id="chicagoButton" class="pc-item1" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730609-chicago.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Chicago
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="houstonButton" class="pc-item2" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730673-housten.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Houston
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="atlantaButton" class="pc-item3" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="atlanta-pic"src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730234-atlanta312x158.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Atlanta
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="phoenixButton" class="pc-item4" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="phoenix-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730775-phoenix.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Phoenix
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="sanFranciscoButton" class="pc-item5" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1564239661-sanFransisco.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            San Francisco
+                                        </div>
+
+                                    </div>
+
+                                    
+								<div id="bostonButton" class="pc-item6" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="boston-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1538716782-1537596029boston.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Boston
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div id="dallasButton" class="pc-item7" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1538716746-1537588809dallas.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Dallas
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="newYorkButton" class="pc-item8" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="newYork-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730757-newyork312x158.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            New York
+                                        </div>
+
+                                    </div>
+
+								
+                                    <div id="auroraButton" class="pc-item9" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1559573845-AuroraCO.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Aurora
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div id="losAngelesButton" class="pc-item10" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img src="https://woowhonetworkcom.s3.amazonaws.com/city/1538716690-1537589458losangeles.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Los Angeles
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div id="miamiButton" class="pc-item11" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="miami-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1541730630-miami.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Miami
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="coloradoSpringsButton" class="pc-item12" onclick="window.location='<?php echo $reloadPageUrl;?>'">
+
+                                        <img class="colorado-springs-pic" src="https://woowhonetworkcom.s3.amazonaws.com/city/1538716764-1538407736ColoradoSprings.jpg">
+
+                                        <div class="pc-txt-centered">
+
+                                            Colorado Springs
+                                        </div>
+
+                                    </div>
+
+
+                            </div>
+
+                        </div>
