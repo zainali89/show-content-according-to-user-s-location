@@ -1,0 +1,110 @@
+<script>
+	function updateOtherWidgets()
+	{
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/Menu-URL-generator", {cityClicked:"Denver"});
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/Bootstrap Theme - Display - Recent Members", {cityClicked:"Denver"});
+	}
+	function btnDenverClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Denver"});
+		updateOtherWidgets();
+    }
+	
+	function btnChicagoClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Chicago"});
+		updateOtherWidgets();
+    }
+	
+	function btnHoustonClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Houston"});
+		updateOtherWidgets();
+    }
+	
+	function btnAtlantaClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Atlanta"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnPhoenixClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Phoenix"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnSanFranciscoClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"San Francisco"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnBostonClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Boston"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnDallasClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Dallas"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnNewYorkClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"New York"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnAuroraClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Aurora"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnLosAngelesClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Los Angeles"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnMiamiClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Miami"});
+		updateOtherWidgets();
+    }
+	
+	
+	function btnColoradoSpringsClicked(){
+		$.post("https://www.woowhonetwork.com/api/widget/get/html/widget-for-changing-user-location-session", {cityClicked:"Colorado Springs"});
+		updateOtherWidgets();
+    }
+	
+	
+	var btnDenver = document.getElementById("denverButton"); 
+	var btnChicago = document.getElementById("chicagoButton");
+	var btnHouston = document.getElementById("houstonButton");
+	var btnAtlanta = document.getElementById("atlantaButton");
+	var btnPhoenix = document.getElementById("phoenixButton");
+	var btnSanFrancisco = document.getElementById("sanFranciscoButton");
+	var btnBoston = document.getElementById("bostonButton");
+	var btnDallas = document.getElementById("dallasButton");
+	var btnNewYork = document.getElementById("newYorkButton");
+	var btnAurora = document.getElementById("auroraButton");
+	var btnLosAngeles = document.getElementById("losAngelesButton");
+	var btnMiami = document.getElementById("miamiButton");
+	var btnColoradoSprings = document.getElementById("coloradoSpringsButton");
+	
+    // Assigning event listeners to the button
+    btnDenver.addEventListener("click", btnDenverClicked);
+    btnChicago.addEventListener("click", btnChicagoClicked);
+    btnHouston.addEventListener("click", btnHoustonClicked);
+    btnAtlanta.addEventListener("click", btnAtlantaClicked);
+    btnPhoenix.addEventListener("click", btnPhoenixClicked);
+    btnSanFrancisco.addEventListener("click", btnSanFranciscoClicked);
+    btnBoston.addEventListener("click", btnBostonClicked);
+    btnDallas.addEventListener("click", btnDallasClicked);
+    btnNewYork.addEventListener("click", btnNewYorkClicked);
+    btnAurora.addEventListener("click", btnAuroraClicked);
+    btnLosAngeles.addEventListener("click", btnLosAngelesClicked);
+    btnMiami.addEventListener("click", btnMiamiClicked);
+    btnColoradoSprings.addEventListener("click", btnColoradoSpringsClicked);
+</script>
