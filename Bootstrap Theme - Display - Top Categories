@@ -1,0 +1,193 @@
+<?php 
+session_start();
+if($_SESSION['new_city'])
+{
+	$uCityz = $_SESSION['new_city'];
+}
+else
+{
+	$uCityz = $_SESSION['cityz'];
+}
+$titleStyleColor = "";
+if($wa['recent_tCategories_tColor'] != ""){
+    $titleStyleColor = 'style="color: '.$wa['recent_tCategories_tColor'].'"';
+}
+if($wa['streaming_view_more_class'] != ''){
+    $viewAllClass = $wa['streaming_view_more_class'];
+} else {
+    $viewAllClass = 'btn-info';
+}
+
+if($wa['streaming_read_more_class'] != ''){
+    $readMoreClass = $wa['streaming_read_more_class'];
+} else {
+    $readMoreClass = 'btn-success';
+}
+?>
+<div class="clearfix"></div>
+<div class="content-container top-level-category-stream">
+	<div class="clearfix"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php if ($wa['tcategories_show_view_all'] != '0'){ ?>
+                    <a href="<?php echo $w['categories_page_url']?>" class="view-all-btn-desktop hidden-xs btn <?php echo $viewAllClass ?>">
+                        %%%view_all_label%%%
+                    </a>
+                <?php } ?>
+                <h2 class="nomargin sm-text-center streaming-title" <?php echo $titleStyleColor; ?>>
+                    <?php echo $wa['custom_217']." | ".'<a href="/categories" class="viewLink wow slideInUp" style="visibility: visible;">View All</a>';?>                    
+                </h2>
+				
+
+                <hr>
+            </div>
+<?php
+
+$professionsModel = new list_professions();
+$checkImages = false;
+
+if(isset($wa['HL-HSOO-top_categories-only_photos']) && $wa['HL-HSOO-top_categories-only_photos'] == "1"){
+    $professionsWhere = array(
+        array('value' => "" , 'column' => 'image', 'logic' => '!=')
+    );
+}else{
+    $professionsWhere = array();
+}
+
+if ($w['default_top_category_sort'] == "") {
+    $w['default_top_category_sort'] = " name ";
+};
+$limitQuery= $wa['custom_218'];
+
+if ($wa['custom_219'] == "" || $wa['custom_219'] == 0){
+    $professionsModel->setOrder('name','ASC');
+} else if ($wa['custom_219'] == 1) {
+    $professionsModel->setOrder('name','DESC');
+} else if ($wa['custom_219'] == 2) {
+    $professionsModel->setOrder('sort_order','ASC');
+} else if ($wa['custom_219'] == 3) {
+    $professionsModel->setOrder('sort_order','DESC');
+}
+
+if ($wa['custom_311'] == "2"){
+    $columnWidth = "col-md-6";
+} else if ($wa['custom_311'] == "1") {
+    $columnWidth = "col-md-4";
+} else {
+    $columnWidth = "col-md-3";
+}
+
+if (empty($limitQuery)) {
+    $limitQuery=8;
+};
+
+$professionsResults = $professionsModel->getByLimit(0,$limitQuery,$professionsWhere);
+$renderCount = 0;
+?>
+<div class="row">
+<div class="col-md-12 slickTopCategories">
+<?php foreach($professionsResults as $profession){?>
+	
+	<!-- URL generator for categories -->
+<?php 
+if($uCityz == 'Denver'){
+	$latz = '39.7392358';
+	$lonz = '-104.990251';
+}else if($uCityz == 'Chicago'){
+	$latz = '41.8781136';
+	$lonz = '-87.6297982';
+} else if($uCityz == 'Houston'){
+	$latz = '29.7604267';
+	$lonz = '-95.3698028';
+}else if($uCityz == 'Atlanta'){
+	$latz = '33.7489954';
+	$lonz = '-84.3879824';
+}else if($uCityz == 'Phoenix'){
+	$latz = '33.4483771';
+	$lonz = '-112.0740373';
+}else if($uCityz == 'San Francisco'){
+	$latz = '37.7749295';
+	$lonz = '-122.4194155';
+}else if($uCityz == 'Boston'){
+	$latz = '42.3600825';
+	$lonz = '-71.0588801';
+}else if($uCityz == 'Dallas'){
+	$latz = '32.7766642';
+	$lonz = '-96.79698789999999';
+}else if($uCityz == 'New York'){
+	$latz = '40.7127753';
+	$lonz = '-74.0059728';
+}else if($uCityz == 'Aurora'){
+	$latz = '39.7294319';
+	$lonz = '-104.8319195';
+}else if($uCityz == 'Los Angeles'){
+	$latz = '34.0522342';
+	$lonz = '-118.2436849';
+}else if($uCityz == 'Miami'){
+	$latz = '25.7616798';
+	$lonz = '-80.1917902';
+}else if($uCityz == 'Colorado Springs'){
+	$latz = '38.8338816';
+	$lonz = '-104.8213634';
+}else{
+	$latz = $_SESSION['latz'];
+	$lonz = $_SESSION['lonz'];
+}
+				
+				$tempz = 'search_results?sid=';
+				$tempz .= $profession->profession_id;								  
+				$tempz .= "&location_value=";
+				$tempz .= $uCityz;
+				$tempz .= "&location_type=locality&lat=";
+				$tempz .= $latz;
+				$tempz .= "&lng=";
+				$tempz .= $lonz;
+				
+				?>
+				
+	<!-- end of URL generator for categories -->
+	
+	
+    <div class="top-category-single col-sm-6 <?php echo $columnWidth; ?> text-center bmargin bpad">
+         <?php if (!empty($w['lazy_load_images'])) { ?>
+            <div class="pic lazyloader" <?php if ($profession->image) { ?>data-src="<?php echo $profession->image; ?>"<?php } ?>>
+        <?php } else { ?>
+            <div class="pic" <?php if ($profession->image) { ?>style="background-image:url('<?php echo $profession->image; ?>')"<?php } ?>>
+        <?php } ?>
+            <span class="pic-caption bottom-to-top" onclick>
+                <h3 class="pic-title bmargin">
+                    <?php echo substr($profession->name,0,100); if (strlen($profession->name) > 100) { ?>...<?php } ?>
+                </h3>
+                <hr>
+				
+				
+				
+                <a alt="<?php echo $profession->name;?>" title="<?php echo $profession->name;?>" href="/<?php echo $tempz; ?>" title="<?php echo ucwords($profession->name); ?>" class="btn <?php echo $readMoreClass?> fpad-lg vpad view-more">
+                    %%%view_category_label%%%
+                </a>
+            </span>
+			<a href="/<?php echo $tempz; ?>" class="homepage-link-element <?php if ($wa['streaming_info_display'] == "on_hover") { ?>hidden-xs<?php } ?>"></a>
+        </div>
+    </div>
+<?php $renderCount++;
+} ?>
+</div>
+    <div class="clearfix"></div>
+    <?php if ($wa['tcategories_show_view_all'] != '0'){ ?>
+        <div class="col-md-6">
+            <a href="<?php echo $w['categories_page_url']?>" class="btn btn-lg <?php echo $viewAllClass ?> btn-block visible-xs-block">%%%view_all_label%%%</a>
+        </div>
+    <?php } ?>
+</div>
+</div>
+</div>
+</div>
+<?php
+    global $featureSliderEnabled, $featureMaxPerRow, $featureSliderClass, $postsCount;
+    $postsCount = $renderCount;
+    $featureSliderEnabled = $wa['tcategories_carousel_slider'];
+    $featureMaxPerRow = $wa['custom_311'];
+    $featureSliderClass = '.slickTopCategories';
+    addonController::showWidget('post_carousel_slider','1a19675a36d28232077972bbdb6bb7fe');
+?>
