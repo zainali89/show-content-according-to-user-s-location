@@ -1,0 +1,15 @@
+<!-- if you want to change user location and content if user click on one of popular city then do following-->
+
+make a wiget with name  "widget-for-changing-user-location-session"
+and put following code into it
+
+<!-- -->
+<?php 
+session_start();
+$_SESSION['new_city'] = $_POST["cityClicked"];
+
+?>
+
+
+
+and make a popular cities widget and use it on website
