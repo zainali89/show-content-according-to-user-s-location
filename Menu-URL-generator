@@ -1,49 +1,9 @@
 <!-- copy the code below and make a widget with name "Menu-URL-generator" and past the following code into it-->
 <!-- then use this widget in the main menu links, for example for events, put the in the URL box /events?[widget code]-->
 
-if($uCityz == 'Denver'){
-	$latz = '39.7392358';
-	$lonz = '-104.990251';
-}else if($uCityz == 'Chicago'){
-	$latz = '41.8781136';
-	$lonz = '-87.6297982';
-} else if($uCityz == 'Houston'){
-	$latz = '29.7604267';
-	$lonz = '-95.3698028';
-}else if($uCityz == 'Atlanta'){
-	$latz = '33.7489954';
-	$lonz = '-84.3879824';
-}else if($uCityz == 'Phoenix'){
-	$latz = '33.4483771';
-	$lonz = '-112.0740373';
-}else if($uCityz == 'San Francisco'){
-	$latz = '37.7749295';
-	$lonz = '-122.4194155';
-}else if($uCityz == 'Boston'){
-	$latz = '42.3600825';
-	$lonz = '-71.0588801';
-}else if($uCityz == 'Dallas'){
-	$latz = '32.7766642';
-	$lonz = '-96.79698789999999';
-}else if($uCityz == 'New York'){
-	$latz = '40.7127753';
-	$lonz = '-74.0059728';
-}else if($uCityz == 'Aurora'){
-	$latz = '39.7294319';
-	$lonz = '-104.8319195';
-}else if($uCityz == 'Los Angeles'){
-	$latz = '34.0522342';
-	$lonz = '-118.2436849';
-}else if($uCityz == 'Miami'){
-	$latz = '25.7616798';
-	$lonz = '-80.1917902';
-}else if($uCityz == 'Colorado Springs'){
-	$latz = '38.8338816';
-	$lonz = '-104.8213634';
-}else{
-	$latz = $_SESSION['latz'];
-	$lonz = $_SESSION['lonz'];
-}<?php
+
+
+<?php
 session_start();
 $uCityz='';
 if($_SESSION['new_city'])
