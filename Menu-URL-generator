@@ -59,7 +59,7 @@ if($uCityz == 'Denver'){
 }
 
 //jobs?
-$tempz = "q=&location_value=";
+$tempz = "?q=&location_value=";
 $tempz .= $uCityz;
 $tempz .= "&location_type=locality&lat=";
 $tempz .= $latz;
