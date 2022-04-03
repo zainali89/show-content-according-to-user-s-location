@@ -1,0 +1,125 @@
+bottomSection.upperSection .cityImageWrapper img, .bottomSection .articleBlock figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.pc-grid-container > div > img {
+    border-radius: 8px;
+}
+.pc-txt-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pc-grid-container > div {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 8px;
+    position: relative;
+    color: white;
+    line-height: 30px;
+    cursor: pointer;
+}
+.pc-grid-container {
+    display: grid;
+    grid-template-areas:
+        'i0 i0 i1 i2'
+        'i0 i0 i3 i4'
+        'i5 i6 i7 i8'
+        'i9 i10 i11 i12';
+    grid-gap: 10px;
+}
+.bottomSection.upperSection .cityImageWrapper {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+}
+.pc-item0 {
+    grid-area: i0;
+}
+.pc-item1 {
+    grid-area: i1;
+}
+.pc-item2 {
+    grid-area: i2;
+}
+.pc-item3 {
+    grid-area: i3;
+}
+.pc-item4 {
+    grid-area: i4;
+}
+.pc-item5 {
+    grid-area: i5;
+}
+.pc-item6 {
+    grid-area: i6;
+}
+.pc-item7 {
+    grid-area: i7;
+}
+.pc-item8 {
+    grid-area: i8;
+}
+.pc-item9 {
+    grid-area: i9;
+}
+.pc-item10 {
+    grid-area: i10;
+}
+.pc-item11 {
+    grid-area: i11;
+}
+.pc-item12 {
+    grid-area: i12;
+}
+img.denver-pic {
+    width: 570px;
+}
+img.atlanta-pic, img.phoenix-pic {
+    width: 316px;
+    height: 295px;
+}
+img.boston-pic, img.miami-pic, img.colorado-springs-pic, img.newYork-pic {
+    height: 220px;
+}
+@media only screen and (max-width: 767px){
+	
+	.pc-txt-centered {
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 767px){
+.bottomSection h2 a.viewLink {
+    font-size: 12px;
+}
+}
+	@media screen and (max-width: 992px){
+.bottomSection h2 a.viewLink {
+    font-size: 14px;
+}
+}
+.bottomSection h2 a.viewLink {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #599bd2;
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.slideInUp {
+    animation-name: slideInUp;
+}
+a.viewLink.wow.slideInUp {
+    font-size: 20px;
+}
+.popular-cities-section {
+    padding: 40px 0px 20px 0px;
+}
